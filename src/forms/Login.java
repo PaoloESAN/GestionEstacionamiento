@@ -6,6 +6,7 @@ package forms;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import utilidades.TodoJson;
 
 /**
  *
@@ -127,7 +128,11 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        JOptionPane.showMessageDialog(this, "prueba");
+        if (TodoJson.verificarUsuario(txtUsuario.getText(), txtContra.getText())) {
+            JOptionPane.showMessageDialog(this, "LOGIN CORRECTO");
+        }else{
+            JOptionPane.showMessageDialog(this, "LOGIN FALLIDO");
+        }
     }//GEN-LAST:event_button1ActionPerformed
 
     private void btnVerContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerContraActionPerformed
