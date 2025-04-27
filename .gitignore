@@ -1,5 +1,8 @@
+/.idea/
+/out/
 /dist/
 /build/
 /src/META-INF/
 /salida/
 /test/
+/SistemaGestionEstacionamiento.iml
