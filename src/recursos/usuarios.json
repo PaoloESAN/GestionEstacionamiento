@@ -1,0 +1,244 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Leonardo",
+      "segundo_nombre": "Adriano",
+      "apellidos": "CAHUAYA CABALLERO",
+      "contraseña": "lcahuaya"
+    },
+    {
+      "nombre": "Emily",
+      "segundo_nombre": "Paola",
+      "apellidos": "CALDERON ANAYA",
+      "contraseña": "ecalderon"
+    },
+    {
+      "nombre": "Carlos",
+      "segundo_nombre": "Alejandro",
+      "apellidos": "CARDENAS ARONES",
+      "contraseña": "ccardenas"
+    },
+    {
+      "nombre": "Dereck",
+      "segundo_nombre": "Paolo",
+      "apellidos": "CARRASCO ALHUAY",
+      "contraseña": "pcarrasco"
+    },
+    {
+      "nombre": "Jhony",
+      "segundo_nombre": "",
+      "apellidos": "CERCADO ATALAYA",
+      "contraseña": "jcercado"
+    },
+    {
+      "nombre": "Piero",
+      "segundo_nombre": "Jair",
+      "apellidos": "CHAHUAILACC ALDANA",
+      "contraseña": "pchahuailacc"
+    },
+    {
+      "nombre": "Domenico",
+      "segundo_nombre": "Adriano",
+      "apellidos": "CHANG HURTADO",
+      "contraseña": "dchang"
+    },
+    {
+      "nombre": "Fabrizzio",
+      "segundo_nombre": "Miguel",
+      "apellidos": "COSME CONTRERAS",
+      "contraseña": "fcosme"
+    },
+    {
+      "nombre": "Braulio",
+      "segundo_nombre": "Alisimbel",
+      "apellidos": "COZ ORO",
+      "contraseña": "bcoz"
+    },
+    {
+      "nombre": "Freddy",
+      "segundo_nombre": "Angel",
+      "apellidos": "DELGADO VILLANUEVA",
+      "contraseña": "fdelgado"
+    },
+    {
+      "nombre": "Leonardo",
+      "segundo_nombre": "Anthony",
+      "apellidos": "DIAZ MENDEZ",
+      "contraseña": "ldiaz"
+    },
+    {
+      "nombre": "Niove",
+      "segundo_nombre": "Alejandra",
+      "apellidos": "FUENTES LOPEZ",
+      "contraseña": "nfuentes"
+    },
+    {
+      "nombre": "Bruno",
+      "segundo_nombre": "Sebastian",
+      "apellidos": "GAMARRA QUINTO",
+      "contraseña": "bgamarra"
+    },
+    {
+      "nombre": "Paolo",
+      "segundo_nombre": "Lionel",
+      "apellidos": "GUZMAN HUAMANI",
+      "contraseña": "pguzman"
+    },
+    {
+      "nombre": "Romario",
+      "segundo_nombre": "",
+      "apellidos": "HUAMANI PACCAYA",
+      "contraseña": "rhuamani"
+    },
+    {
+      "nombre": "Manuel",
+      "segundo_nombre": "Eduardo",
+      "apellidos": "IPENZA NEGRI",
+      "contraseña": "mipenza"
+    },
+    {
+      "nombre": "Gustavo",
+      "segundo_nombre": "David",
+      "apellidos": "JANAMPA DIAZ",
+      "contraseña": "gjanampa"
+    },
+    {
+      "nombre": "Fabriccio",
+      "segundo_nombre": "Alonso",
+      "apellidos": "LIRA VERA",
+      "contraseña": "flira"
+    },
+    {
+      "nombre": "Anthony",
+      "segundo_nombre": "Paolo",
+      "apellidos": "LLERENA CABRERA",
+      "contraseña": "allerena"
+    },
+    {
+      "nombre": "Jean",
+      "segundo_nombre": "Paul",
+      "apellidos": "LORA SAMBRANO",
+      "contraseña": "jlora"
+    },
+    {
+      "nombre": "Guillermo",
+      "segundo_nombre": "Matias",
+      "apellidos": "LUZA GUTIERREZ",
+      "contraseña": "gluza"
+    },
+    {
+      "nombre": "Javier",
+      "segundo_nombre": "Valentino",
+      "apellidos": "MANRIQUE RIVADENEIRA",
+      "contraseña": "jmanrique"
+    },
+    {
+      "nombre": "Andrea",
+      "segundo_nombre": "Esperanza",
+      "apellidos": "MARIN ANDRADE",
+      "contraseña": "amarin"
+    },
+    {
+      "nombre": "Yoel",
+      "segundo_nombre": "Junior",
+      "apellidos": "MIRANDA TRINIDAD",
+      "contraseña": "ymiranda"
+    },
+    {
+      "nombre": "Brayan",
+      "segundo_nombre": "Cristian",
+      "apellidos": "MOLLINEDO ARCAYA",
+      "contraseña": "cbmollinedo"
+    },
+    {
+      "nombre": "Cristhian",
+      "segundo_nombre": "Jesus",
+      "apellidos": "NICHO BRUNO",
+      "contraseña": "cnicho"
+    },
+    {
+      "nombre": "Franco",
+      "segundo_nombre": "Mauricio",
+      "apellidos": "PICHILINGUE GUARDIA",
+      "contraseña": "fpichilingue"
+    },
+    {
+      "nombre": "Kevin",
+      "segundo_nombre": "Henry",
+      "apellidos": "QUISPE INGA",
+      "contraseña": "kquispe"
+    },
+    {
+      "nombre": "Aldo",
+      "segundo_nombre": "Mauricio",
+      "apellidos": "RIOS JURO",
+      "contraseña": "arios"
+    },
+    {
+      "nombre": "Fatima",
+      "segundo_nombre": "Del",
+      "apellidos": "RIVASPLATA NUÑEZ",
+      "contraseña": "frivasplata"
+    },
+    {
+      "nombre": "Alvaro",
+      "segundo_nombre": "Nicolas",
+      "apellidos": "RIVERA TARQUE",
+      "contraseña": "arivera"
+    },
+    {
+      "nombre": "Kelly",
+      "segundo_nombre": "Jasmyn",
+      "apellidos": "ROMAN AYVAR",
+      "contraseña": "kroman"
+    },
+    {
+      "nombre": "Juliet",
+      "segundo_nombre": "Jaciel",
+      "apellidos": "TEJADA CORREA",
+      "contraseña": "jtejada"
+    },
+    {
+      "nombre": "Santiago",
+      "segundo_nombre": "Bernabe",
+      "apellidos": "TENORIO ROJAS",
+      "contraseña": "stenorio"
+    },
+    {
+      "nombre": "Chayna",
+      "segundo_nombre": "",
+      "apellidos": "TUCTO MAGILIANO",
+      "contraseña": "ctucto"
+    },
+    {
+      "nombre": "Brandon",
+      "segundo_nombre": "Stiven",
+      "apellidos": "VALENZUELA CUBAS",
+      "contraseña": "bvalenzuela"
+    },
+    {
+      "nombre": "Owen",
+      "segundo_nombre": "Manuel",
+      "apellidos": "VEGA QUISPE",
+      "contraseña": "ovega"
+    },
+    {
+      "nombre": "Ivan",
+      "segundo_nombre": "Francisco",
+      "apellidos": "VILLEGAS ALARCON",
+      "contraseña": "ivillegas"
+    },
+    {
+      "nombre": "Andres",
+      "segundo_nombre": "Alfredo",
+      "apellidos": "WU SOLANO",
+      "contraseña": "awu"
+    },
+    {
+      "nombre": "Aram",
+      "segundo_nombre": "Eleazar",
+      "apellidos": "YANCACHAJLLA SUCSO",
+      "contraseña": "ayancachajlla"
+    }
+  ]
+}
