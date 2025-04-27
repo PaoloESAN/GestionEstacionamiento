@@ -4,7 +4,7 @@ import com.formdev.flatlaf.FlatDarculaLaf;
 import forms.Login;
 import javax.swing.UIManager;
 
-public class SistemaGestionEstacionamiento {
+public class Iniciar {
 
     public static void main(String[] args) {
         ventana();
