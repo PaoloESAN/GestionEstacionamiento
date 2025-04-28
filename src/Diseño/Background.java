@@ -23,6 +23,14 @@ import javax.swing.SwingUtilities;
  */
 public class Background extends JComponent {
 
+    public Icon getImage() {
+        return image;
+    }
+
+    public void setImage(Icon image) {
+        this.image = image;
+    }
+
     public Component getBlur() {
         return blur;
     }
@@ -37,7 +45,7 @@ public class Background extends JComponent {
             }
         });
     }
-
+    
     private Icon image;
     private BufferedImage bufferedImage;
     private Component blur;
@@ -47,15 +55,15 @@ public class Background extends JComponent {
     }
 
     private void createImage() {
-        if (image != null) {
+        if (getImage() != null) {
             int width = getWidth();
             int height = getHeight();
             if (width > 0 && height > 0) {
                 bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
                 Graphics2D g2 = bufferedImage.createGraphics();
                 g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-                Rectangle rec = getAutoSize(image);
-                g2.drawImage(((ImageIcon) image).getImage(), rec.x, rec.y, rec.width, rec.height, null);
+                Rectangle rec = getAutoSize(getImage());
+                g2.drawImage(((ImageIcon) getImage()).getImage(), rec.x, rec.y, rec.width, rec.height, null);
                 if (blur != null) {
                     createBlurImage(g2);
                 }

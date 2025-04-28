@@ -43,6 +43,7 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         background1.setBlur(panelLogin);
+        background1.setImage(new javax.swing.ImageIcon(getClass().getResource("/recursos/carroFondo.png"))); // NOI18N
 
         panelLogin.setOpaque(false);
 
@@ -130,6 +131,10 @@ public class Login extends javax.swing.JFrame {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         if (TodoJson.verificarUsuario(txtUsuario.getText(), txtContra.getText())) {
             JOptionPane.showMessageDialog(this, "LOGIN CORRECTO");
+            Principal princ = new Principal();
+            princ.setLocationRelativeTo(null);
+            princ.setVisible(true);
+            this.setVisible(false);
         }else{
             JOptionPane.showMessageDialog(this, "LOGIN FALLIDO");
         }
