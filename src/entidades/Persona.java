@@ -1,26 +1,20 @@
 package entidades;
 
 public abstract class Persona {
-    int nacionalidad;
+    String nacionalidad;
     String identificacion;
     String nombresApellidos;
-    int sexo;
+    String sexo;
     String telefono;
     String correo;
     String direccion;
     String distrito;
 
     public String getNacionalidad() {
-        switch (nacionalidad) {
-            case 1:
-                return "Peruana";
-            case 2:
-                return "Extranjera";
-        }
-        return "No especificado";
+        return nacionalidad;
     }
 
-    public void setNacionalidad(int nacionalidad) {
+    public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
 
@@ -41,16 +35,10 @@ public abstract class Persona {
     }
 
     public String getSexo() {
-        switch (sexo) {
-            case 1:
-                return "Hombre";
-            case 2:
-                return "Mujer";
-        }
-        return "Otro";
+        return sexo;
     }
 
-    public void setSexo(int sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
