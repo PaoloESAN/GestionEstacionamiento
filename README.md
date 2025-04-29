@@ -11,7 +11,7 @@ Este programa en java permite registrar clientes, empleados y vehículos además
 - [Swing time picker](https://github.com/DJ-Raven/java-swing-timepicker)
 ## Creditos
 - La mayoría del increíble diseño java swing es de: [DJ-Raven](https://github.com/DJ-Raven)
-https://www.youtube.com/c/HelloWorld-Raven
-https://www.youtube.com/watch?v=RZK0RlBhPpQ
-https://www.youtube.com/watch?v=fRib6RpGmiE
-https://www.youtube.com/watch?v=8x_t8euwCGM
+* https://www.youtube.com/c/HelloWorld-Raven
+* https://www.youtube.com/watch?v=RZK0RlBhPpQ
+* https://www.youtube.com/watch?v=fRib6RpGmiE
+* https://www.youtube.com/watch?v=8x_t8euwCGM
