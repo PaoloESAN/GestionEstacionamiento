@@ -36,8 +36,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnRegisCliente = new Diseño.Button();
-        button3 = new Diseño.Button();
-        button4 = new Diseño.Button();
+        btnRegisEmple = new Diseño.Button();
+        btnRegisVehiculo = new Diseño.Button();
         button5 = new Diseño.Button();
         button6 = new Diseño.Button();
         button7 = new Diseño.Button();
@@ -80,11 +80,16 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        button3.setText("Registrar Empleado");
-        button3.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnRegisEmple.setText("Registrar Empleado");
+        btnRegisEmple.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnRegisEmple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisEmpleActionPerformed(evt);
+            }
+        });
 
-        button4.setText("Registrar vehículo");
-        button4.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnRegisVehiculo.setText("Registrar vehículo");
+        btnRegisVehiculo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         button5.setText("Registrar Entrada");
         button5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -122,9 +127,9 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(btnRegisCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelPrincLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRegisEmple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnRegisVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
                 .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -144,8 +149,8 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(btnRegisCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnRegisVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRegisEmple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(153, 153, 153))
                     .addGroup(panelPrincLayout.createSequentialGroup()
                         .addGap(48, 48, 48)
@@ -192,6 +197,14 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnRegisClienteActionPerformed
 
+    private void btnRegisEmpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisEmpleActionPerformed
+        Registros registro = new Registros();
+        registro.registroEmpleado(this);
+        if (registro.getEmpleado()==null) {
+            return;
+        }
+    }//GEN-LAST:event_btnRegisEmpleActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -230,9 +243,9 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Diseño.Background background1;
     private Diseño.Button btnRegisCliente;
+    private Diseño.Button btnRegisEmple;
+    private Diseño.Button btnRegisVehiculo;
     private Diseño.Button button1;
-    private Diseño.Button button3;
-    private Diseño.Button button4;
     private Diseño.Button button5;
     private Diseño.Button button6;
     private Diseño.Button button7;

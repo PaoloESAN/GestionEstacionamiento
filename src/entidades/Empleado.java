@@ -1,19 +1,19 @@
 package entidades;
 
 public class Empleado extends Persona {
-    int idEmpleado;
+    String idEmpleado;
     String fechaNac;
 
-    public Empleado(int idEmpleado, String fechaNac) {
+    public Empleado(String idEmpleado, String fechaNac) {
         this.idEmpleado = idEmpleado;
         this.fechaNac = fechaNac;
     }
 
-    public int getIdEmpleado() {
+    public String getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(int idEmpleado) {
+    public void setIdEmpleado(String idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 
