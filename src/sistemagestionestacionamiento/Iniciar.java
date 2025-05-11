@@ -2,6 +2,9 @@ package sistemagestionestacionamiento;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
 import forms.Login;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.UIManager;
 
 public class Iniciar {
@@ -21,5 +24,5 @@ public class Iniciar {
         UIManager.put( "TextComponent.arc", 17 );
         Login login = new Login();
         login.setVisible(true);
+        }
     }
-}

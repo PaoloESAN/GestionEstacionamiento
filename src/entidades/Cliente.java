@@ -1,19 +1,19 @@
 package entidades;
 
 public class Cliente extends Persona {
-    int idCliente;
+    String idCliente;
     String nroLicencia;
 
-    public Cliente(int idCliente, String nroLicencia) {
+    public Cliente(String idCliente, String nroLicencia) {
         this.idCliente = idCliente;
         this.nroLicencia = nroLicencia;
     }
 
-    public int getIdCliente() {
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 
