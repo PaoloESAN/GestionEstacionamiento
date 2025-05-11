@@ -1,8 +1,12 @@
 package entidades;
 
 public class Vehiculo {
+
+    public Vehiculo() {
+    }
+    
     String tipo;
-    String idMarcaModelo;
+    String MarcaModelo;
     String color;
     String nroPlaca;
     String lunasPolarizadas;
@@ -15,12 +19,12 @@ public class Vehiculo {
         this.tipo = tipo;
     }
 
-    public String getIdMarcaModelo() {
-        return idMarcaModelo;
+    public String getMarcaModelo() {
+        return MarcaModelo;
     }
 
-    public void setIdMarcaModelo(String idMarcaModelo) {
-        this.idMarcaModelo = idMarcaModelo;
+    public void setMarcaModelo(String idMarcaModelo) {
+        this.MarcaModelo = idMarcaModelo;
     }
 
     public String getColor() {
