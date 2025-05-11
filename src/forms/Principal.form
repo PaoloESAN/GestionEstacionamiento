@@ -71,7 +71,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="button2" min="-2" pref="168" max="-2" attributes="0"/>
+                              <Component id="btnRegisCliente" min="-2" pref="168" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
@@ -116,7 +116,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="button5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="button2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnRegisCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="171" max="32767" attributes="0"/>
                           </Group>
@@ -188,13 +188,16 @@
                 <Property name="text" type="java.lang.String" value="Registrar Entradas/Salidas"/>
               </Properties>
             </Component>
-            <Component class="Dise&#xf1;o.Button" name="button2">
+            <Component class="Dise&#xf1;o.Button" name="btnRegisCliente">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Registrar Cliente"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="18" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisClienteActionPerformed"/>
+              </Events>
             </Component>
             <Component class="Dise&#xf1;o.Button" name="button3">
               <Properties>

@@ -4,6 +4,9 @@
  */
 package forms;
 
+import entidades.Registro;
+import paneles.Registros;
+
 /**
  *
  * @author USUARIO
@@ -32,7 +35,7 @@ public class Principal extends javax.swing.JFrame {
         button1 = new Diseño.Button();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        button2 = new Diseño.Button();
+        btnRegisCliente = new Diseño.Button();
         button3 = new Diseño.Button();
         button4 = new Diseño.Button();
         button5 = new Diseño.Button();
@@ -69,8 +72,13 @@ public class Principal extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Registrar Entradas/Salidas");
 
-        button2.setText("Registrar Cliente");
-        button2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnRegisCliente.setText("Registrar Cliente");
+        btnRegisCliente.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnRegisCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisClienteActionPerformed(evt);
+            }
+        });
 
         button3.setText("Registrar Empleado");
         button3.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -101,7 +109,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincLayout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnRegisCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelPrincLayout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -137,7 +145,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnRegisCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -173,6 +181,14 @@ public class Principal extends javax.swing.JFrame {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void btnRegisClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisClienteActionPerformed
+        Registros registro = new Registros();
+        registro.registroCliente(this);
+        if (registro.getCliente()==null) {
+            return;
+        }
+    }//GEN-LAST:event_btnRegisClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,8 +227,8 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Diseño.Background background1;
+    private Diseño.Button btnRegisCliente;
     private Diseño.Button button1;
-    private Diseño.Button button2;
     private Diseño.Button button3;
     private Diseño.Button button4;
     private Diseño.Button button5;
