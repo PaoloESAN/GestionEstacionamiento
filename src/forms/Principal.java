@@ -90,6 +90,11 @@ public class Principal extends javax.swing.JFrame {
 
         btnRegisVehiculo.setText("Registrar vehículo");
         btnRegisVehiculo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnRegisVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisVehiculoActionPerformed(evt);
+            }
+        });
 
         button5.setText("Registrar Entrada");
         button5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -204,6 +209,14 @@ public class Principal extends javax.swing.JFrame {
             return;
         }
     }//GEN-LAST:event_btnRegisEmpleActionPerformed
+
+    private void btnRegisVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisVehiculoActionPerformed
+        Registros registro = new Registros();
+        registro.registroVehiculo(this);
+        if (registro.getVehiculo()==null) {
+            return;
+        }
+    }//GEN-LAST:event_btnRegisVehiculoActionPerformed
 
     /**
      * @param args the command line arguments
