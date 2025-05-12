@@ -27,6 +27,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dateChooser1 = new com.raven.datechooser.DateChooser();
         background1 = new Diseño.Background();
         jPanel1 = new javax.swing.JPanel();
         button1 = new Diseño.Button();
@@ -51,6 +52,9 @@ public class RegistroEmpleado extends javax.swing.JPanel {
         txtDistrito = new javax.swing.JTextField();
         comboSexo = new javax.swing.JComboBox<>();
         button2 = new Diseño.Button();
+
+        dateChooser1.setDateFormat("dd/MM/yyyy");
+        dateChooser1.setTextRefernce(txtFechaNac);
 
         background1.setBlur(jPanel1);
         background1.setImage(new javax.swing.ImageIcon(getClass().getResource("/recursos/carroFondo6.jpg"))); // NOI18N
@@ -257,6 +261,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
     private Diseño.Button button1;
     private Diseño.Button button2;
     private javax.swing.JComboBox<String> comboSexo;
+    private com.raven.datechooser.DateChooser dateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
