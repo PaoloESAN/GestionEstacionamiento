@@ -1,7 +1,7 @@
 package entidades;
 
 public class Registro {
-    int idRegistro;
+    String idRegistro;
     String nivel;
     String zona;
     String fechaIngreso;
@@ -13,7 +13,7 @@ public class Registro {
     String tipoDocumento;
     Vehiculo vehiculo;
 
-    public Registro(int idRegistro, String nivel, String zona, String tipoDocumento) {
+    public Registro(String idRegistro, String nivel, String zona, String tipoDocumento) {
         this.idRegistro = idRegistro;
         this.nivel = nivel;
         this.zona = zona;
@@ -22,11 +22,11 @@ public class Registro {
 
     
     
-    public int getIdRegistro() {
+    public String getIdRegistro() {
         return idRegistro;
     }
 
-    public void setIdRegistro(int idRegistro) {
+    public void setIdRegistro(String idRegistro) {
         this.idRegistro = idRegistro;
     }
 
