@@ -8,8 +8,8 @@ public class Registro {
     String horaIngreso;
     Cliente cliente;
     Empleado empleado;
-    String fechaSalida;
-    String horaSalida;
+    String fechaSalida = "null";
+    String horaSalida = "null";
     String tipoDocumento;
     Vehiculo vehiculo;
 

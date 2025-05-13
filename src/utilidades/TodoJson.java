@@ -3,6 +3,7 @@ package utilidades;
 
 import entidades.Cliente;
 import entidades.Empleado;
+import entidades.Registro;
 import entidades.Vehiculo;
 import java.io.File;
 import java.io.FileWriter;
@@ -10,7 +11,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -40,7 +45,7 @@ public class TodoJson {
         }
         return respuesta;
     }
-    public void agregarCliente(File archivo,Cliente cliente){
+    public static void agregarCliente(File archivo,Cliente cliente){
         try {
 
             JSONObject datos;
@@ -77,7 +82,7 @@ public class TodoJson {
                 System.err.println("Error al manejar el archivo JSON: " + e.getMessage());
         }
     }
-    public void agregarCliente(File archivo,Empleado empleado){
+    public static void agregarEmpleado(File archivo,Empleado empleado){
         try {
 
             JSONObject datos;
@@ -114,7 +119,7 @@ public class TodoJson {
                 System.err.println("Error al manejar el archivo JSON: " + e.getMessage());
         }
     }
-    public void agregarVehiculo(File archivo,Vehiculo vehiculo){
+    public static void agregarVehiculo(File archivo,Vehiculo vehiculo){
         try {
 
             JSONObject datos;
@@ -128,12 +133,7 @@ public class TodoJson {
                 datos.put("empleados", new JSONArray());
                 datos.put("vehiculos", new JSONArray());
                 datos.put("registros", new JSONArray());
-            }/*
-                String tipo;
-                String MarcaModelo;
-                String color;
-                String nroPlaca;
-                String lunasPolarizadas;*/
+            }
             JSONObject nuevoVehiculo = new JSONObject();
             nuevoVehiculo.put("numeroPlaca", vehiculo.getNroPlaca());
             nuevoVehiculo.put("marcaModelo", vehiculo.getMarcaModelo());
@@ -150,4 +150,169 @@ public class TodoJson {
                 System.err.println("Error al manejar el archivo JSON: " + e.getMessage());
         }
     }
+    public static void agregarRegistro(File archivo,Registro registro){
+        try {
+
+            JSONObject datos;
+
+            if (archivo.exists()) {
+                String contenido = new String(Files.readAllBytes(archivo.toPath()));
+                datos = new JSONObject(contenido);
+            } else {
+                datos = new JSONObject();
+                datos.put("clientes", new JSONArray());
+                datos.put("empleados", new JSONArray());
+                datos.put("vehiculos", new JSONArray());
+                datos.put("registros", new JSONArray());
+            }
+            JSONObject nuevoRegistro = new JSONObject();
+            
+            nuevoRegistro.put("id", registro.getIdRegistro());
+            nuevoRegistro.put("nivel", registro.getNivel());
+            nuevoRegistro.put("zona", registro.getZona());
+            nuevoRegistro.put("fechaIngreso", registro.getFechaIngreso());
+            nuevoRegistro.put("horaIngreso", registro.getHoraIngreso());
+            nuevoRegistro.put("cliente", registro.getCliente().getIdCliente());
+            nuevoRegistro.put("empleado", registro.getEmpleado().getIdEmpleado());
+            nuevoRegistro.put("vehiculo", registro.getVehiculo().getNroPlaca());
+            nuevoRegistro.put("tipoDocumento", registro.getTipoDocumento());
+            nuevoRegistro.put("fechaSalida", registro.getFechaSalida());
+            nuevoRegistro.put("horaSalida", registro.getHoraSalida());
+
+            datos.getJSONArray("vehiculos").put(nuevoRegistro);
+
+            try (FileWriter fileWriter = new FileWriter(archivo)) {
+                fileWriter.write(datos.toString(4));
+            }
+        } catch (IOException e) {
+                System.err.println("Error al manejar el archivo JSON: " + e.getMessage());
+        }
+    }
+    public static List<Cliente> obtenerListaClientes(File archivo) {
+        List<Cliente> listaClientes = new ArrayList<>();
+
+        try {
+            if (!archivo.exists()) {
+                return listaClientes;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray clientesJSON = datos.getJSONArray("clientes");
+
+            for (int i = 0; i < clientesJSON.length(); i++) {
+                JSONObject clienteObj = clientesJSON.getJSONObject(i);
+
+                Cliente cliente = new Cliente(clienteObj.getString("id"),clienteObj.getString("numeroLicencia"));
+                cliente.setCorreo(clienteObj.getString("correo"));
+                cliente.setDireccion(clienteObj.getString("direccion"));
+                cliente.setDistrito(clienteObj.getString("distrito"));
+                cliente.setIdentificacion(clienteObj.getString("identificacion"));
+                cliente.setNacionalidad(clienteObj.getString("nacionalidad"));
+                cliente.setNombresApellidos(clienteObj.getString("nombresApellidos"));
+                cliente.setSexo(clienteObj.getString("sexo"));
+                cliente.setTelefono(clienteObj.getString("telefono"));
+                listaClientes.add(cliente);
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return listaClientes;
+    }
+    public static List<Empleado> obtenerListaEmpleados(File archivo) {
+        List<Empleado> listaEmpleado = new ArrayList<>();
+
+        try {
+            if (!archivo.exists()) {
+                return listaEmpleado;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray empleadosJSON = datos.getJSONArray("empleados");
+
+            for (int i = 0; i < empleadosJSON.length(); i++) {
+                JSONObject empleadoObj = empleadosJSON.getJSONObject(i);
+
+                Empleado empleado = new Empleado(empleadoObj.getString("id"),empleadoObj.getString("fechaNacimiento"));
+                empleado.setCorreo(empleadoObj.getString("correo"));
+                empleado.setDireccion(empleadoObj.getString("direccion"));
+                empleado.setDistrito(empleadoObj.getString("distrito"));
+                empleado.setIdentificacion(empleadoObj.getString("identificacion"));
+                empleado.setNacionalidad(empleadoObj.getString("nacionalidad"));
+                empleado.setNombresApellidos(empleadoObj.getString("nombresApellidos"));
+                empleado.setSexo(empleadoObj.getString("sexo"));
+                empleado.setTelefono(empleadoObj.getString("telefono"));
+                listaEmpleado.add(empleado);
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return listaEmpleado;
+    }
+    public static List<Vehiculo> obtenerListaVehiculos(File archivo) {
+        List<Vehiculo> listaVehiculo = new ArrayList<>();
+
+        try {
+            if (!archivo.exists()) {
+                return listaVehiculo;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray vehiculosJSON = datos.getJSONArray("empleados");
+
+            for (int i = 0; i < vehiculosJSON.length(); i++) {
+                JSONObject vehiculoObj = vehiculosJSON.getJSONObject(i);
+                
+                Vehiculo vehiculo = new Vehiculo();
+                vehiculo.setNroPlaca(vehiculoObj.getString("numeroPlaca"));
+                vehiculo.setMarcaModelo(vehiculoObj.getString("marcaModelo"));
+                vehiculo.setColor(vehiculoObj.getString("color"));
+                vehiculo.setTipo(vehiculoObj.getString("tipo"));
+                vehiculo.setLunasPolarizadas(vehiculoObj.getString("lunasPolarizadas"));
+                listaVehiculo.add(vehiculo);
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return listaVehiculo;
+    }
+
+    public static File selecArchivo(){
+        File archivo;
+        JFileChooser fileSelect = new JFileChooser(new File(System.getProperty("user.dir")));
+        //user.dir hace que la ventana para escoger archivos inicie en la carpeta donde el programa fue ejecutado
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos JSON (*.json)", "json");
+        fileSelect.setFileFilter(filter);
+        fileSelect.setMultiSelectionEnabled(false);
+
+        int result = fileSelect.showOpenDialog(null); //abre la ventana para escoger archivos
+
+        if (result == fileSelect.APPROVE_OPTION) {
+            archivo = fileSelect.getSelectedFile();
+            if (!archivo.getName().toLowerCase().endsWith(".json")) {
+                archivo = new File(archivo.getParentFile(), archivo.getName() + ".json");
+            }
+            return archivo;
+        } else {
+            System.out.println("Error al cargar");
+            return null;
+        }
+    } 
 }
