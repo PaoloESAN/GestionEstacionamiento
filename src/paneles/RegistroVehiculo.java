@@ -31,14 +31,14 @@ public class RegistroVehiculo extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         button1 = new Diseño.Button();
         jLabel2 = new javax.swing.JLabel();
-        txtTipo = new javax.swing.JTextField();
+        txtNumPlaca = new javax.swing.JTextField();
         button2 = new Diseño.Button();
         jLabel11 = new javax.swing.JLabel();
         txtMarcaModelo = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        txtNumPlaca = new javax.swing.JTextField();
+        txtTipo = new javax.swing.JTextField();
         comboLunas = new javax.swing.JComboBox<>();
         comboColor = new javax.swing.JComboBox<>();
 
@@ -48,7 +48,7 @@ public class RegistroVehiculo extends javax.swing.JPanel {
         jPanel1.setOpaque(false);
 
         button1.setForeground(new java.awt.Color(78, 80, 82));
-        button1.setText("Registrar Cliente");
+        button1.setText("Registrar Vehículo");
         button1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,9 +57,9 @@ public class RegistroVehiculo extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel2.setText("Tipo de vehículo:");
+        jLabel2.setText("Número de placa:");
 
-        txtTipo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtNumPlaca.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         button2.setForeground(new java.awt.Color(78, 80, 82));
         button2.setText("Volver");
@@ -71,12 +71,12 @@ public class RegistroVehiculo extends javax.swing.JPanel {
         });
 
         jLabel11.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel11.setText("Marca y modelo:");
+        jLabel11.setText("Marca y/o modelo:");
 
         txtMarcaModelo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel12.setText("Número de placa:");
+        jLabel12.setText("Tipo de vehículo");
 
         jLabel13.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel13.setText("Lunas polarizadas:");
@@ -84,7 +84,7 @@ public class RegistroVehiculo extends javax.swing.JPanel {
         jLabel14.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel14.setText("Color:");
 
-        txtNumPlaca.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtTipo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         comboLunas.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         comboLunas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
@@ -114,9 +114,9 @@ public class RegistroVehiculo extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(comboLunas, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtNumPlaca, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMarcaModelo, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtTipo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtMarcaModelo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNumPlaca, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(comboColor, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -127,7 +127,7 @@ public class RegistroVehiculo extends javax.swing.JPanel {
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNumPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
@@ -135,7 +135,7 @@ public class RegistroVehiculo extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(txtNumPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)

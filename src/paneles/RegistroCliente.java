@@ -76,7 +76,7 @@ public class RegistroCliente extends javax.swing.JPanel {
         jLabel3.setText("Nacionalidad:");
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel4.setText("Identificación:");
+        jLabel4.setText("Dni/carnet extranjeria:");
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel5.setText("Nombres y apellidos:");
