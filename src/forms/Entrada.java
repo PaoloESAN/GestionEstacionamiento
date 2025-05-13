@@ -4,6 +4,9 @@
  */
 package forms;
 
+import entidades.Registro;
+import paneles.Registros;
+
 /**
  *
  * @author USUARIO
@@ -338,19 +341,31 @@ public class Entrada extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHoraActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        // TODO add your handling code here:
+        Registro registro = new Registro(txtIdRegistro.getText(),(String)comboNivel.getSelectedItem(), txtZona.getText(), (String)comboDoc.getSelectedItem());
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpleadoActionPerformed
-        // TODO add your handling code here:
+        Registros registro = new Registros();
+        registro.registroEmpleado(this);
+        if (registro.getEmpleado()==null) {
+            return;
+        }
     }//GEN-LAST:event_btnEmpleadoActionPerformed
 
     private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
-        // TODO add your handling code here:
+        Registros registro = new Registros();
+        registro.registroCliente(this);
+        if (registro.getCliente()==null) {
+            return;
+        }
     }//GEN-LAST:event_btnClienteActionPerformed
 
     private void btnVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehiculoActionPerformed
-        // TODO add your handling code here:
+        Registros registro = new Registros();
+        registro.registroVehiculo(this);
+        if (registro.getVehiculo()==null) {
+            return;
+        }
     }//GEN-LAST:event_btnVehiculoActionPerformed
 
     /**
