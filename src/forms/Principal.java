@@ -4,7 +4,9 @@
  */
 package forms;
 
+import java.io.File;
 import paneles.Registros;
+import utilidades.TodoJson;
 
 /**
  *
@@ -12,6 +14,7 @@ import paneles.Registros;
  */
 public class Principal extends javax.swing.JFrame {
 
+    File archivo;
     Entrada entrada = new Entrada();
     public Principal() {
         initComponents();
@@ -37,7 +40,7 @@ public class Principal extends javax.swing.JFrame {
         btnRegisVehiculo = new Diseño.Button();
         btnRegisEntrada = new Diseño.Button();
         btnRegisSalida = new Diseño.Button();
-        button7 = new Diseño.Button();
+        btnSelecArchivo = new Diseño.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,19 +107,18 @@ public class Principal extends javax.swing.JFrame {
         btnRegisSalida.setText("Registrar Salida");
         btnRegisSalida.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
-        button7.setText("Seleccionar Archivo");
-        button7.setFont(new java.awt.Font("SansSerif", 3, 18)); // NOI18N
+        btnSelecArchivo.setText("Seleccionar Archivo");
+        btnSelecArchivo.setFont(new java.awt.Font("SansSerif", 3, 18)); // NOI18N
+        btnSelecArchivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelecArchivoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelPrincLayout = new javax.swing.GroupLayout(panelPrinc);
         panelPrinc.setLayout(panelPrincLayout);
         panelPrincLayout.setHorizontalGroup(
             panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
                 .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelPrincLayout.createSequentialGroup()
@@ -135,14 +137,22 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(btnRegisEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(87, 87, 87))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53))
+                        .addComponent(btnSelecArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(124, 124, 124))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(53, 53, 53))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(124, 124, 124))))))
         );
         panelPrincLayout.setVerticalGroup(
             panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,7 +179,7 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSelecArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -202,6 +212,7 @@ public class Principal extends javax.swing.JFrame {
         if (registro.getCliente()==null) {
             return;
         }
+        TodoJson.agregarCliente(archivo, registro.getCliente());
     }//GEN-LAST:event_btnRegisClienteActionPerformed
 
     private void btnRegisEmpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisEmpleActionPerformed
@@ -210,6 +221,7 @@ public class Principal extends javax.swing.JFrame {
         if (registro.getEmpleado()==null) {
             return;
         }
+        TodoJson.agregarEmpleado(archivo, registro.getEmpleado());
     }//GEN-LAST:event_btnRegisEmpleActionPerformed
 
     private void btnRegisVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisVehiculoActionPerformed
@@ -218,14 +230,21 @@ public class Principal extends javax.swing.JFrame {
         if (registro.getVehiculo()==null) {
             return;
         }
+        TodoJson.agregarVehiculo(archivo, registro.getVehiculo());
     }//GEN-LAST:event_btnRegisVehiculoActionPerformed
 
     private void btnRegisEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisEntradaActionPerformed
         entrada.setPrincipal(this);
         entrada.setLocationRelativeTo(this);
+        entrada.setArchivo(archivo);
+        entrada.rellenar();
         entrada.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnRegisEntradaActionPerformed
+
+    private void btnSelecArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecArchivoActionPerformed
+        archivo = TodoJson.selecArchivo();
+    }//GEN-LAST:event_btnSelecArchivoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,8 +288,8 @@ public class Principal extends javax.swing.JFrame {
     private Diseño.Button btnRegisEntrada;
     private Diseño.Button btnRegisSalida;
     private Diseño.Button btnRegisVehiculo;
+    private Diseño.Button btnSelecArchivo;
     private Diseño.Button button1;
-    private Diseño.Button button7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
