@@ -11,6 +11,7 @@ import entidades.Vehiculo;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import paneles.Registros;
 import utilidades.TodoJson;
 
@@ -422,7 +423,8 @@ public class Entrada extends javax.swing.JFrame {
         registro.setCliente(listaClientes.get(comboClie.getSelectedIndex()));
         registro.setEmpleado(listaEmpleados.get(comboEmple.getSelectedIndex()));
         registro.setVehiculo(listaVehiculos.get(comboVehi.getSelectedIndex()));
-        
+        TodoJson.agregarRegistro(archivo, registro);
+        JOptionPane.showMessageDialog(this, "Se registró correctamente");
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpleadoActionPerformed

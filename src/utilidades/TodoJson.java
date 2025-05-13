@@ -179,7 +179,7 @@ public class TodoJson {
             nuevoRegistro.put("fechaSalida", registro.getFechaSalida());
             nuevoRegistro.put("horaSalida", registro.getHoraSalida());
 
-            datos.getJSONArray("vehiculos").put(nuevoRegistro);
+            datos.getJSONArray("registros").put(nuevoRegistro);
 
             try (FileWriter fileWriter = new FileWriter(archivo)) {
                 fileWriter.write(datos.toString(4));
@@ -271,7 +271,7 @@ public class TodoJson {
             String contenido = new String(Files.readAllBytes(archivo.toPath()));
             JSONObject datos = new JSONObject(contenido);
 
-            JSONArray vehiculosJSON = datos.getJSONArray("empleados");
+            JSONArray vehiculosJSON = datos.getJSONArray("vehiculos");
 
             for (int i = 0; i < vehiculosJSON.length(); i++) {
                 JSONObject vehiculoObj = vehiculosJSON.getJSONObject(i);
@@ -293,6 +293,186 @@ public class TodoJson {
 
         return listaVehiculo;
     }
+    public static List<Registro> obtenerListaRegistros(File archivo) {
+        List<Registro> listaRegistro = new ArrayList<>();
+
+        try {
+            if (!archivo.exists()) {
+                return listaRegistro;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray registrosJSON = datos.getJSONArray("registros");
+
+            for (int i = 0; i < registrosJSON.length(); i++) {
+                JSONObject registroObj = registrosJSON.getJSONObject(i);
+                Registro registro = new Registro(registroObj.getString("id"),registroObj.getString("nivel"),registroObj.getString("zona"),registroObj.getString("tipoDocumento"));
+                registro.setFechaIngreso(registroObj.getString("fechaIngreso"));
+                registro.setHoraIngreso(registroObj.getString("horaIngreso"));
+                registro.setEmpleado(buscarEmpleado(archivo, registroObj.getString("empleado")));
+                registro.setCliente(buscarCliente(archivo, registroObj.getString("cliente")));
+                registro.setVehiculo(buscarVehiculo(archivo, registroObj.getString("vehiculo")));
+                registro.setTipoDocumento(registroObj.getString("tipoDocumento"));
+                registro.setFechaSalida(registroObj.getString("fechaSalida"));
+                registro.setHoraSalida(registroObj.getString("horaSalida"));
+                listaRegistro.add(registro);
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return listaRegistro;
+    }
+    public static Cliente buscarCliente(File archivo,String id) {
+
+        try {
+            if (!archivo.exists()) {
+                return null;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray clientesJSON = datos.getJSONArray("clientes");
+
+            for (int i = 0; i < clientesJSON.length(); i++) {
+                JSONObject clienteObj = clientesJSON.getJSONObject(i);
+
+                Cliente cliente = new Cliente(clienteObj.getString("id"),clienteObj.getString("numeroLicencia"));
+                cliente.setCorreo(clienteObj.getString("correo"));
+                cliente.setDireccion(clienteObj.getString("direccion"));
+                cliente.setDistrito(clienteObj.getString("distrito"));
+                cliente.setIdentificacion(clienteObj.getString("identificacion"));
+                cliente.setNacionalidad(clienteObj.getString("nacionalidad"));
+                cliente.setNombresApellidos(clienteObj.getString("nombresApellidos"));
+                cliente.setSexo(clienteObj.getString("sexo"));
+                cliente.setTelefono(clienteObj.getString("telefono"));
+                if (cliente.getIdCliente().equals(id)) {
+                    return cliente;
+                }
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return null;
+    }
+    public static Empleado buscarEmpleado(File archivo,String id) {
+
+        try {
+            if (!archivo.exists()) {
+                return null;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray empleadosJSON = datos.getJSONArray("empleados");
+
+            for (int i = 0; i < empleadosJSON.length(); i++) {
+                JSONObject empleadoObj = empleadosJSON.getJSONObject(i);
+
+                Empleado empleado = new Empleado(empleadoObj.getString("id"),empleadoObj.getString("fechaNacimiento"));
+                empleado.setCorreo(empleadoObj.getString("correo"));
+                empleado.setDireccion(empleadoObj.getString("direccion"));
+                empleado.setDistrito(empleadoObj.getString("distrito"));
+                empleado.setIdentificacion(empleadoObj.getString("identificacion"));
+                empleado.setNacionalidad(empleadoObj.getString("nacionalidad"));
+                empleado.setNombresApellidos(empleadoObj.getString("nombresApellidos"));
+                empleado.setSexo(empleadoObj.getString("sexo"));
+                empleado.setTelefono(empleadoObj.getString("telefono"));
+                if (empleado.getIdEmpleado().equals(id)) {
+                    return empleado;
+                }
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return null;
+    }
+    public static Vehiculo buscarVehiculo(File archivo,String numeroPlaca) {
+
+        try {
+            if (!archivo.exists()) {
+                return null;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray vehiculosJSON = datos.getJSONArray("vehiculos");
+
+            for (int i = 0; i < vehiculosJSON.length(); i++) {
+                JSONObject vehiculoObj = vehiculosJSON.getJSONObject(i);
+                
+                Vehiculo vehiculo = new Vehiculo();
+                vehiculo.setNroPlaca(vehiculoObj.getString("numeroPlaca"));
+                vehiculo.setMarcaModelo(vehiculoObj.getString("marcaModelo"));
+                vehiculo.setColor(vehiculoObj.getString("color"));
+                vehiculo.setTipo(vehiculoObj.getString("tipo"));
+                vehiculo.setLunasPolarizadas(vehiculoObj.getString("lunasPolarizadas"));
+                if (vehiculo.getNroPlaca().equals(numeroPlaca)) {
+                    return vehiculo;
+                }
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return null;
+    }
+    public static Registro buscarRegistro(File archivo,String id) {
+
+        try {
+            if (!archivo.exists()) {
+                return null;
+            }
+
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray registrosJSON = datos.getJSONArray("registros");
+
+            for (int i = 0; i < registrosJSON.length(); i++) {
+                JSONObject registroObj = registrosJSON.getJSONObject(i);
+                Registro registro = new Registro(registroObj.getString("id"),registroObj.getString("nivel"),registroObj.getString("zona"),registroObj.getString("tipoDocumento"));
+                registro.setFechaIngreso(registroObj.getString("fechaIngreso"));
+                registro.setHoraIngreso(registroObj.getString("horaIngreso"));
+                registro.setEmpleado(buscarEmpleado(archivo, registroObj.getString("empleado")));
+                registro.setCliente(buscarCliente(archivo, registroObj.getString("cliente")));
+                registro.setVehiculo(buscarVehiculo(archivo, registroObj.getString("vehiculo")));
+                registro.setTipoDocumento(registroObj.getString("tipoDocumento"));
+                registro.setFechaSalida(registroObj.getString("fechaSalida"));
+                registro.setHoraSalida(registroObj.getString("horaSalida"));
+                if (registro.getIdRegistro().equals(id)) {
+                    return registro;
+                }
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer archivo JSON: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error al procesar JSON: " + e.getMessage());
+        }
+
+        return null;
+    }
+    
 
     public static File selecArchivo(){
         File archivo;

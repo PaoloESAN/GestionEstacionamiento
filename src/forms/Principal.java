@@ -5,6 +5,7 @@
 package forms;
 
 import java.io.File;
+import javax.swing.JOptionPane;
 import paneles.Registros;
 import utilidades.TodoJson;
 
@@ -18,6 +19,11 @@ public class Principal extends javax.swing.JFrame {
     Entrada entrada = new Entrada();
     public Principal() {
         initComponents();
+        btnRegisCliente.setEnabled(false);
+        btnRegisEmple.setEnabled(false);
+        btnRegisVehiculo.setEnabled(false);
+        btnRegisEntrada.setEnabled(false);
+        btnRegisSalida.setEnabled(false);
     }
 
     /**
@@ -213,6 +219,7 @@ public class Principal extends javax.swing.JFrame {
             return;
         }
         TodoJson.agregarCliente(archivo, registro.getCliente());
+        JOptionPane.showMessageDialog(this, "Se registró correctamente");
     }//GEN-LAST:event_btnRegisClienteActionPerformed
 
     private void btnRegisEmpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisEmpleActionPerformed
@@ -222,6 +229,7 @@ public class Principal extends javax.swing.JFrame {
             return;
         }
         TodoJson.agregarEmpleado(archivo, registro.getEmpleado());
+        JOptionPane.showMessageDialog(this, "Se registró correctamente");
     }//GEN-LAST:event_btnRegisEmpleActionPerformed
 
     private void btnRegisVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisVehiculoActionPerformed
@@ -231,6 +239,7 @@ public class Principal extends javax.swing.JFrame {
             return;
         }
         TodoJson.agregarVehiculo(archivo, registro.getVehiculo());
+        JOptionPane.showMessageDialog(this, "Se registró correctamente");
     }//GEN-LAST:event_btnRegisVehiculoActionPerformed
 
     private void btnRegisEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisEntradaActionPerformed
@@ -244,6 +253,13 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnSelecArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecArchivoActionPerformed
         archivo = TodoJson.selecArchivo();
+        if (!(archivo == null)) {
+            btnRegisCliente.setEnabled(true);
+            btnRegisEmple.setEnabled(true);
+            btnRegisVehiculo.setEnabled(true);
+            btnRegisEntrada.setEnabled(true);
+            btnRegisSalida.setEnabled(true);
+        }
     }//GEN-LAST:event_btnSelecArchivoActionPerformed
 
     /**
