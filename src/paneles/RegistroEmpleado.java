@@ -62,7 +62,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
         jPanel1.setOpaque(false);
 
         button1.setForeground(new java.awt.Color(78, 80, 82));
-        button1.setText("Registrar Cliente");
+        button1.setText("Registrar Empleado");
         button1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +80,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
         jLabel3.setText("Nacionalidad:");
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel4.setText("Identificación:");
+        jLabel4.setText("Dni/carnet extranjeria:");
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel5.setText("Nombres y apellidos:");
@@ -168,7 +168,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
                 .addContainerGap(8, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(97, 97, 97)
                 .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())

@@ -49,7 +49,7 @@ public class Registros {
     }
     public void registroEmpleado(JFrame princ){
                 JDialog mostrarEmple = new JDialog(princ,"Registrar Empleado",true);
-                mostrarEmple.add(new RegistroCliente(mostrarEmple,this));
+                mostrarEmple.add(new RegistroEmpleado(mostrarEmple,this));
                 mostrarEmple.pack();
                 mostrarEmple.setLocationRelativeTo(princ);
                 mostrarEmple.setVisible(true);

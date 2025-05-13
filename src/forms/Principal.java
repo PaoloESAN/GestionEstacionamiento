@@ -254,6 +254,7 @@ public class Principal extends javax.swing.JFrame {
     private void btnSelecArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecArchivoActionPerformed
         archivo = TodoJson.selecArchivo();
         if (!(archivo == null)) {
+            JOptionPane.showMessageDialog(this, "Archivo cargado correctamente");
             btnRegisCliente.setEnabled(true);
             btnRegisEmple.setEnabled(true);
             btnRegisVehiculo.setEnabled(true);

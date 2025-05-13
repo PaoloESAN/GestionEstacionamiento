@@ -477,6 +477,8 @@ public class TodoJson {
     public static File selecArchivo(){
         File archivo;
         JFileChooser fileSelect = new JFileChooser(new File(System.getProperty("user.dir")));
+        fileSelect.setDialogTitle("Seleccionar o crear archivo");
+        fileSelect.setApproveButtonText("Aceptar");
         //user.dir hace que la ventana para escoger archivos inicie en la carpeta donde el programa fue ejecutado
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos JSON (*.json)", "json");
         fileSelect.setFileFilter(filter);
