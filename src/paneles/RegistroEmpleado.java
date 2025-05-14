@@ -43,7 +43,6 @@ public class RegistroEmpleado extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         txtIdEmpleado = new javax.swing.JTextField();
         txtFechaNac = new javax.swing.JTextField();
-        txtNaci = new javax.swing.JTextField();
         txtIdent = new javax.swing.JTextField();
         txtNomApe = new javax.swing.JTextField();
         txtTelef = new javax.swing.JTextField();
@@ -52,6 +51,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
         txtDistrito = new javax.swing.JTextField();
         comboSexo = new javax.swing.JComboBox<>();
         button2 = new Diseño.Button();
+        comboNacio = new javax.swing.JComboBox<>();
 
         dateChooser1.setDateFormat("dd/MM/yyyy");
         dateChooser1.setTextRefernce(txtFechaNac);
@@ -104,8 +104,6 @@ public class RegistroEmpleado extends javax.swing.JPanel {
 
         txtFechaNac.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
-        txtNaci.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-
         txtIdent.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         txtNomApe.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -129,6 +127,9 @@ public class RegistroEmpleado extends javax.swing.JPanel {
                 button2ActionPerformed(evt);
             }
         });
+
+        comboNacio.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        comboNacio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Peruana", "Extranjera" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -157,14 +158,14 @@ public class RegistroEmpleado extends javax.swing.JPanel {
                             .addComponent(jLabel6))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNaci, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtIdent, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNomApe, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtTelef, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDirecc, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDistrito, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(comboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(comboNacio, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(8, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -185,7 +186,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtNaci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboNacio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -242,7 +243,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
         empleado.setDireccion(txtDirecc.getText());
         empleado.setDistrito(txtDistrito.getText());
         empleado.setIdentificacion(txtIdent.getText());
-        empleado.setNacionalidad(txtNaci.getText());
+        empleado.setNacionalidad((String)comboNacio.getSelectedItem());
         empleado.setNombresApellidos(txtNomApe.getText());
         empleado.setSexo((String)comboSexo.getSelectedItem());
         empleado.setTelefono(txtTelef.getText());
@@ -260,6 +261,7 @@ public class RegistroEmpleado extends javax.swing.JPanel {
     private Diseño.Background background1;
     private Diseño.Button button1;
     private Diseño.Button button2;
+    private javax.swing.JComboBox<String> comboNacio;
     private javax.swing.JComboBox<String> comboSexo;
     private com.raven.datechooser.DateChooser dateChooser1;
     private javax.swing.JLabel jLabel1;
@@ -279,7 +281,6 @@ public class RegistroEmpleado extends javax.swing.JPanel {
     private javax.swing.JTextField txtFechaNac;
     private javax.swing.JTextField txtIdEmpleado;
     private javax.swing.JTextField txtIdent;
-    private javax.swing.JTextField txtNaci;
     private javax.swing.JTextField txtNomApe;
     private javax.swing.JTextField txtTelef;
     // End of variables declaration//GEN-END:variables

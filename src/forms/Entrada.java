@@ -509,7 +509,7 @@ public class Entrada extends javax.swing.JFrame {
         if (!comboActivo) {
             return;
         }
-        labelVehiculo.setText(listaVehiculos.get(comboClie.getSelectedIndex()).getMarcaModelo());
+        labelVehiculo.setText(listaVehiculos.get(comboVehi.getSelectedIndex()).getMarcaModelo());
     }//GEN-LAST:event_comboVehiActionPerformed
 
     public void rellenar(){
