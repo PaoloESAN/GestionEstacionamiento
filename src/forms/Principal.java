@@ -18,6 +18,7 @@ public class Principal extends javax.swing.JFrame {
     File archivo;
     Entrada entrada = new Entrada();
     Salida salida = new Salida();
+    ListadoRegistro listado = new ListadoRegistro();
     public Principal() {
         initComponents();
         btnRegisCliente.setEnabled(false);
@@ -251,7 +252,6 @@ public class Principal extends javax.swing.JFrame {
             return;
         }
         TodoJson.agregarCliente(archivo, registro.getCliente());
-        JOptionPane.showMessageDialog(this, "Se registró correctamente");
     }//GEN-LAST:event_btnRegisClienteActionPerformed
 
     private void btnRegisEmpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisEmpleActionPerformed
@@ -261,7 +261,6 @@ public class Principal extends javax.swing.JFrame {
             return;
         }
         TodoJson.agregarEmpleado(archivo, registro.getEmpleado());
-        JOptionPane.showMessageDialog(this, "Se registró correctamente");
     }//GEN-LAST:event_btnRegisEmpleActionPerformed
 
     private void btnRegisVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisVehiculoActionPerformed
@@ -271,7 +270,6 @@ public class Principal extends javax.swing.JFrame {
             return;
         }
         TodoJson.agregarVehiculo(archivo, registro.getVehiculo());
-        JOptionPane.showMessageDialog(this, "Se registró correctamente");
     }//GEN-LAST:event_btnRegisVehiculoActionPerformed
 
     private void btnRegisEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisEntradaActionPerformed
@@ -306,7 +304,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegisSalidaActionPerformed
 
     private void btnListaRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListaRegistroActionPerformed
-        // TODO add your handling code here:
+        listado.setPrincipal(this);
+        listado.setLocationRelativeTo(this);
+        listado.setArchivo(archivo);
+        listado.rellenar();
+        listado.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnListaRegistroActionPerformed
 
     /**
