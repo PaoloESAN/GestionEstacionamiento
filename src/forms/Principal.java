@@ -25,6 +25,7 @@ public class Principal extends javax.swing.JFrame {
         btnRegisVehiculo.setEnabled(false);
         btnRegisEntrada.setEnabled(false);
         btnRegisSalida.setEnabled(false);
+        btnListaRegistro.setEnabled(false);
     }
 
     /**
@@ -48,6 +49,8 @@ public class Principal extends javax.swing.JFrame {
         btnRegisEntrada = new Diseño.Button();
         btnRegisSalida = new Diseño.Button();
         btnSelecArchivo = new Diseño.Button();
+        jLabel4 = new javax.swing.JLabel();
+        btnListaRegistro = new Diseño.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -127,6 +130,19 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Listado");
+
+        btnListaRegistro.setText("Listado registros");
+        btnListaRegistro.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnListaRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListaRegistroActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelPrincLayout = new javax.swing.GroupLayout(panelPrinc);
         panelPrinc.setLayout(panelPrincLayout);
         panelPrincLayout.setHorizontalGroup(
@@ -165,6 +181,12 @@ public class Principal extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(124, 124, 124))))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnListaRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(297, 297, 297))
         );
         panelPrincLayout.setVerticalGroup(
             panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,7 +204,11 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(btnRegisVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnRegisEmple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnRegisSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(153, 153, 153))
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnListaRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55))
                     .addGroup(panelPrincLayout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -266,6 +292,7 @@ public class Principal extends javax.swing.JFrame {
             btnRegisVehiculo.setEnabled(true);
             btnRegisEntrada.setEnabled(true);
             btnRegisSalida.setEnabled(true);
+            btnListaRegistro.setEnabled(true);
         }
     }//GEN-LAST:event_btnSelecArchivoActionPerformed
 
@@ -277,6 +304,10 @@ public class Principal extends javax.swing.JFrame {
         salida.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnRegisSalidaActionPerformed
+
+    private void btnListaRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListaRegistroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnListaRegistroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,6 +346,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Diseño.Background background1;
+    private Diseño.Button btnListaRegistro;
     private Diseño.Button btnRegisCliente;
     private Diseño.Button btnRegisEmple;
     private Diseño.Button btnRegisEntrada;
@@ -325,6 +357,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel panelPrinc;
     // End of variables declaration//GEN-END:variables
 }

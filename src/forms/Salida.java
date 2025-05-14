@@ -8,6 +8,7 @@ import entidades.Registro;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import utilidades.TodoJson;
 
 /**
@@ -282,6 +283,8 @@ public class Salida extends javax.swing.JFrame {
         Registro registro = listaRegistros.get(comboRegistro.getSelectedIndex());
         registro.setFechaSalida(txtFechaSalida.getText());
         registro.setHoraSalida(txtHoraSalida.getText());
+        TodoJson.modificarRegistro(archivo, registro);
+        JOptionPane.showMessageDialog(this, "Se registro correctamente");
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void comboRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboRegistroActionPerformed

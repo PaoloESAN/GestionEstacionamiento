@@ -499,7 +499,6 @@ public class TodoJson {
             }
 
             Files.write(archivo.toPath(), datos.toString(4).getBytes());
-            System.out.println("Cliente modificado con éxito.");
 
         } catch (IOException e) {
             System.err.println("Error al leer o escribir el archivo: " + e.getMessage());
