@@ -473,6 +473,39 @@ public class TodoJson {
         return null;
     }
     
+    public static void modificarRegistro(File archivo,Registro registro) {
+        
+        try {
+            String contenido = new String(Files.readAllBytes(archivo.toPath()));
+            JSONObject datos = new JSONObject(contenido);
+
+            JSONArray registros = datos.getJSONArray("registros");
+
+            for (int i = 0; i < registros.length(); i++) {
+                JSONObject nuevoRegistro = registros.getJSONObject(i);
+                if (nuevoRegistro.getString("id").equals(registro.getIdRegistro())) {
+                    nuevoRegistro.put("nivel", registro.getNivel());
+                    nuevoRegistro.put("zona", registro.getZona());
+                    nuevoRegistro.put("fechaIngreso", registro.getFechaIngreso());
+                    nuevoRegistro.put("horaIngreso", registro.getHoraIngreso());
+                    nuevoRegistro.put("cliente", registro.getCliente().getIdCliente());
+                    nuevoRegistro.put("empleado", registro.getEmpleado().getIdEmpleado());
+                    nuevoRegistro.put("vehiculo", registro.getVehiculo().getNroPlaca());
+                    nuevoRegistro.put("tipoDocumento", registro.getTipoDocumento());
+                    nuevoRegistro.put("fechaSalida", registro.getFechaSalida());
+                    nuevoRegistro.put("horaSalida", registro.getHoraSalida());
+                    break; 
+                }
+            }
+
+            Files.write(archivo.toPath(), datos.toString(4).getBytes());
+            System.out.println("Cliente modificado con éxito.");
+
+        } catch (IOException e) {
+            System.err.println("Error al leer o escribir el archivo: " + e.getMessage());
+        }
+    }
+    
 
     public static File selecArchivo(){
         File archivo;
