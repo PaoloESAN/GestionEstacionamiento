@@ -17,6 +17,7 @@ public class Principal extends javax.swing.JFrame {
 
     File archivo;
     Entrada entrada = new Entrada();
+    Salida salida = new Salida();
     public Principal() {
         initComponents();
         btnRegisCliente.setEnabled(false);
@@ -112,6 +113,11 @@ public class Principal extends javax.swing.JFrame {
 
         btnRegisSalida.setText("Registrar Salida");
         btnRegisSalida.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnRegisSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisSalidaActionPerformed(evt);
+            }
+        });
 
         btnSelecArchivo.setText("Seleccionar Archivo");
         btnSelecArchivo.setFont(new java.awt.Font("SansSerif", 3, 18)); // NOI18N
@@ -262,6 +268,15 @@ public class Principal extends javax.swing.JFrame {
             btnRegisSalida.setEnabled(true);
         }
     }//GEN-LAST:event_btnSelecArchivoActionPerformed
+
+    private void btnRegisSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisSalidaActionPerformed
+        salida.setPrincipal(this);
+        salida.setLocationRelativeTo(this);
+        salida.setArchivo(archivo);
+        salida.rellenar();
+        salida.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnRegisSalidaActionPerformed
 
     /**
      * @param args the command line arguments

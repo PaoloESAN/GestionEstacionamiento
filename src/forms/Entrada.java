@@ -329,9 +329,9 @@ public class Entrada extends javax.swing.JFrame {
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
                         .addComponent(comboDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(88, 88, 88)
+                        .addGap(76, 76, 76)
                         .addComponent(jLabel14)
-                        .addGap(6, 6, 6)
+                        .addGap(18, 18, 18)
                         .addComponent(labelVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panelPrincLayout.createSequentialGroup()
@@ -406,12 +406,13 @@ public class Entrada extends javax.swing.JFrame {
                         .addComponent(btnVehiculo)))
                 .addGap(16, 16, 16)
                 .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(comboDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(comboDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel14))
                     .addGroup(panelPrincLayout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
-                            .addComponent(jLabel14)
                             .addComponent(labelVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(33, 33, 33)
                 .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -529,13 +530,13 @@ public class Entrada extends javax.swing.JFrame {
         for(Vehiculo vehiculos : listaVehiculos){
             comboVehi.addItem(vehiculos.getNroPlaca());
         }
-        if (!(listaClientes.size() == 0)) {
+        if (!(listaClientes.isEmpty())) {
             labelCliente.setText(listaClientes.get(0).getNombresApellidos());
         }
-        if (!(listaEmpleados.size() == 0)) {
+        if (!(listaEmpleados.isEmpty())) {
             labelEmpleado.setText(listaEmpleados.get(0).getNombresApellidos());
         }
-        if (!(listaVehiculos.size() == 0)) {
+        if (!(listaVehiculos.isEmpty())) {
             labelVehiculo.setText(listaVehiculos.get(0).getMarcaModelo());
         }
         comboActivo = true;

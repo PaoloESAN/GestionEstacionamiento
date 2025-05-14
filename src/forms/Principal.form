@@ -249,6 +249,9 @@
                   <Font name="SansSerif" size="18" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisSalidaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="Dise&#xf1;o.Button" name="btnSelecArchivo">
               <Properties>
