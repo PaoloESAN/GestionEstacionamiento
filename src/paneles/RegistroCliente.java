@@ -42,7 +42,6 @@ public class RegistroCliente extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         txtIdCliente = new javax.swing.JTextField();
         txtNumLicencia = new javax.swing.JTextField();
-        txtNaci = new javax.swing.JTextField();
         txtIdent = new javax.swing.JTextField();
         txtNomApe = new javax.swing.JTextField();
         txtTelef = new javax.swing.JTextField();
@@ -51,6 +50,7 @@ public class RegistroCliente extends javax.swing.JPanel {
         txtDistrito = new javax.swing.JTextField();
         comboSexo = new javax.swing.JComboBox<>();
         button2 = new Diseño.Button();
+        comboNacio = new javax.swing.JComboBox<>();
 
         background1.setBlur(jPanel1);
         background1.setImage(new javax.swing.ImageIcon(getClass().getResource("/recursos/carroFondo6.jpg"))); // NOI18N
@@ -100,8 +100,6 @@ public class RegistroCliente extends javax.swing.JPanel {
 
         txtNumLicencia.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
-        txtNaci.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-
         txtIdent.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         txtNomApe.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -125,6 +123,9 @@ public class RegistroCliente extends javax.swing.JPanel {
                 button2ActionPerformed(evt);
             }
         });
+
+        comboNacio.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        comboNacio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Peruana", "Extranjera" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -153,14 +154,14 @@ public class RegistroCliente extends javax.swing.JPanel {
                             .addComponent(jLabel6))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNaci, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtIdent, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNomApe, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtTelef, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDirecc, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDistrito, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(comboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(comboNacio, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(49, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -181,7 +182,7 @@ public class RegistroCliente extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtNaci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboNacio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -238,7 +239,7 @@ public class RegistroCliente extends javax.swing.JPanel {
         cliente.setDireccion(txtDirecc.getText());
         cliente.setDistrito(txtDistrito.getText());
         cliente.setIdentificacion(txtIdent.getText());
-        cliente.setNacionalidad(txtNaci.getText());
+        cliente.setNacionalidad((String)comboNacio.getSelectedItem());
         cliente.setNombresApellidos(txtNomApe.getText());
         cliente.setSexo((String)comboSexo.getSelectedItem());
         cliente.setTelefono(txtTelef.getText());
@@ -256,6 +257,7 @@ public class RegistroCliente extends javax.swing.JPanel {
     private Diseño.Background background1;
     private Diseño.Button button1;
     private Diseño.Button button2;
+    private javax.swing.JComboBox<String> comboNacio;
     private javax.swing.JComboBox<String> comboSexo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -273,7 +275,6 @@ public class RegistroCliente extends javax.swing.JPanel {
     private javax.swing.JTextField txtDistrito;
     private javax.swing.JTextField txtIdCliente;
     private javax.swing.JTextField txtIdent;
-    private javax.swing.JTextField txtNaci;
     private javax.swing.JTextField txtNomApe;
     private javax.swing.JTextField txtNumLicencia;
     private javax.swing.JTextField txtTelef;

@@ -88,7 +88,6 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtNaci" min="-2" pref="258" max="-2" attributes="0"/>
                                   <Component id="txtIdent" min="-2" pref="258" max="-2" attributes="0"/>
                                   <Component id="txtNomApe" min="-2" pref="258" max="-2" attributes="0"/>
                                   <Component id="txtTelef" min="-2" pref="258" max="-2" attributes="0"/>
@@ -96,6 +95,7 @@
                                   <Component id="txtDirecc" min="-2" pref="258" max="-2" attributes="0"/>
                                   <Component id="txtDistrito" min="-2" pref="258" max="-2" attributes="0"/>
                                   <Component id="comboSexo" min="-2" pref="258" max="-2" attributes="0"/>
+                                  <Component id="comboNacio" min="-2" pref="258" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -123,7 +123,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNaci" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboNacio" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -279,13 +279,6 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtNaci">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="SansSerif" size="18" style="0"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JTextField" name="txtIdent">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -358,6 +351,22 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button2ActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboNacio">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="18" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="Peruana"/>
+                    <StringItem index="1" value="Extranjera"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
