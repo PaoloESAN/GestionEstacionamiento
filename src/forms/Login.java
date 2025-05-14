@@ -133,6 +133,7 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "LOGIN CORRECTO");
             Principal princ = new Principal();
             princ.setLocationRelativeTo(null);
+            princ.setResizable(false);
             princ.setVisible(true);
             this.setVisible(false);
         }else{
