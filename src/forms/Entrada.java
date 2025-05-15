@@ -97,7 +97,7 @@ public class Entrada extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         background1.setBlur(panelPrinc);
-        background1.setImage(new javax.swing.ImageIcon(getClass().getResource("/recursos/carroFondo7.jpg"))); // NOI18N
+        background1.setImage(new javax.swing.ImageIcon(getClass().getResource("/recursos/carroFondo11.jpg"))); // NOI18N
 
         panelPrinc.setOpaque(false);
 

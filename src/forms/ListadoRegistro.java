@@ -77,16 +77,14 @@ public class ListadoRegistro extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         background1.setBlur(panelPrinc);
-        background1.setImage(new javax.swing.ImageIcon(getClass().getResource("/recursos/carroFondo7.jpg"))); // NOI18N
+        background1.setImage(new javax.swing.ImageIcon(getClass().getResource("/recursos/carroFondo8.jpg"))); // NOI18N
 
         panelPrinc.setOpaque(false);
-        panelPrinc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Listado Registros");
-        panelPrinc.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 6, 495, -1));
 
         btnVolver.setText("Volver");
         btnVolver.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -95,87 +93,72 @@ public class ListadoRegistro extends javax.swing.JFrame {
                 btnVolverActionPerformed(evt);
             }
         });
-        panelPrinc.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 390, 101, 44));
 
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ID Registro:");
-        panelPrinc.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
 
         labelNivel.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelNivel.setForeground(new java.awt.Color(255, 255, 255));
         labelNivel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 100, 30));
 
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Zona:");
-        panelPrinc.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Hora Entrada:");
-        panelPrinc.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Hora Salida:");
-        panelPrinc.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Cliente");
-        panelPrinc.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Empleado");
-        panelPrinc.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Vehículo");
-        panelPrinc.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, -1, -1));
 
         labelEmpleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelEmpleado.setForeground(new java.awt.Color(255, 255, 255));
         labelEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 230, 24));
 
         labelCliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelCliente.setForeground(new java.awt.Color(255, 255, 255));
         labelCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 230, 24));
 
         jLabel12.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Nombre:");
-        panelPrinc.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Nombre:");
-        panelPrinc.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Marca:");
-        panelPrinc.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
 
         labelVehiculo.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelVehiculo.setForeground(new java.awt.Color(255, 255, 255));
         labelVehiculo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 230, 24));
 
         comboRegistro.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         comboRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -183,50 +166,177 @@ public class ListadoRegistro extends javax.swing.JFrame {
                 comboRegistroActionPerformed(evt);
             }
         });
-        panelPrinc.add(comboRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 160, -1));
 
         jLabel11.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Nivel:");
-        panelPrinc.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         labelZona.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelZona.setForeground(new java.awt.Color(255, 255, 255));
         labelZona.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        panelPrinc.add(labelZona, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 100, 30));
+        labelZona.setText("adaw");
 
         jLabel15.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Fecha Salida:");
-        panelPrinc.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
 
         labelHoraEntrada.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelHoraEntrada.setForeground(new java.awt.Color(255, 255, 255));
         labelHoraEntrada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelHoraEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 160, 30));
 
         jLabel16.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Fecha Entrada:");
-        panelPrinc.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         labelFechaEntrada.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelFechaEntrada.setForeground(new java.awt.Color(255, 255, 255));
         labelFechaEntrada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelFechaEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 160, 30));
 
         labelFechaSalida.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelFechaSalida.setForeground(new java.awt.Color(255, 255, 255));
         labelFechaSalida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelFechaSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 160, 30));
 
         labelHoraSalida.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         labelHoraSalida.setForeground(new java.awt.Color(255, 255, 255));
         labelHoraSalida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelPrinc.add(labelHoraSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 160, 30));
+
+        javax.swing.GroupLayout panelPrincLayout = new javax.swing.GroupLayout(panelPrinc);
+        panelPrinc.setLayout(panelPrincLayout);
+        panelPrincLayout.setHorizontalGroup(
+            panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(jLabel2)
+                .addGap(16, 16, 16)
+                .addComponent(comboRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel11)
+                .addGap(5, 5, 5)
+                .addComponent(labelNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelZona, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102)
+                .addComponent(jLabel13)
+                .addGap(12, 12, 12)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel9))
+                    .addComponent(labelEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel16)
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel6)))
+                .addGap(7, 7, 7)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelFechaEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelHoraEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(140, 140, 140)
+                .addComponent(jLabel12)
+                .addGap(12, 12, 12)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel8))
+                    .addComponent(labelCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel15)
+                .addGap(10, 10, 10)
+                .addComponent(labelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(250, 250, 250)
+                .addComponent(jLabel10))
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel7)
+                .addGap(11, 11, 11)
+                .addComponent(labelHoraSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(140, 140, 140)
+                .addComponent(jLabel14)
+                .addGap(15, 15, 15)
+                .addComponent(labelVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(692, 692, 692)
+                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panelPrincLayout.setVerticalGroup(
+            panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrincLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel1)
+                .addGap(17, 17, 17)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(comboRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel11))
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(labelNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(labelZona, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel13))
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(6, 6, 6)
+                        .addComponent(labelEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel6))
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addComponent(labelFechaEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(labelHoraEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel12))
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel8)
+                        .addGap(16, 16, 16)
+                        .addComponent(labelCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(16, 16, 16)
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(labelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(labelVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelPrincLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(panelPrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(labelHoraSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(20, 20, 20)
+                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         background1.add(panelPrinc);
         panelPrinc.setBounds(30, 20, 810, 460);
