@@ -1,0 +1,191 @@
+{
+    "registros": [
+        {
+            "zona": "ni idea",
+            "fechaIngreso": "13/05/2025",
+            "cliente": "001",
+            "tipoDocumento": "Factura",
+            "horaIngreso": "03:07",
+            "empleado": "001",
+            "fechaSalida": "null",
+            "id": "001",
+            "vehiculo": "ABC123",
+            "nivel": "Piso -2",
+            "horaSalida": "null"
+        },
+        {
+            "zona": "nose",
+            "fechaIngreso": "14/05/2025",
+            "cliente": "001",
+            "tipoDocumento": "Boleta",
+            "horaIngreso": "21:10",
+            "empleado": "001",
+            "fechaSalida": "null",
+            "id": "008",
+            "vehiculo": "ABC123",
+            "nivel": "Piso 3",
+            "horaSalida": "null"
+        },
+        {
+            "zona": "madrid",
+            "fechaIngreso": "14/05/2025",
+            "cliente": "002",
+            "tipoDocumento": "Boleta",
+            "horaIngreso": "04:07",
+            "empleado": "009",
+            "fechaSalida": "14/05/2025",
+            "id": "010",
+            "vehiculo": "ADD131",
+            "nivel": "Piso -2",
+            "horaSalida": "04:28"
+        },
+        {
+            "zona": "Playa",
+            "fechaIngreso": "14/05/2025",
+            "cliente": "002",
+            "tipoDocumento": "Factura",
+            "horaIngreso": "04:21",
+            "empleado": "009",
+            "fechaSalida": "null",
+            "id": "011",
+            "vehiculo": "ADD131",
+            "nivel": "Piso 3",
+            "horaSalida": "null"
+        }
+    ],
+    "empleados": [
+        {
+            "distrito": "adawdwdwa",
+            "fechaNacimiento": "13/05/2025",
+            "correo": "dawdawd",
+            "nombresApellidos": "askda d awd",
+            "direccion": "dadada",
+            "identificacion": "2213",
+            "id": "001",
+            "sexo": "Mujer",
+            "telefono": "154522",
+            "nacionalidad": "españa"
+        },
+        {
+            "distrito": "japon",
+            "fechaNacimiento": "16/05/1986",
+            "correo": "dawdawad",
+            "nombresApellidos": "dawdawdaw wadawda",
+            "direccion": "dadawawwa",
+            "identificacion": "1231231223",
+            "id": "009",
+            "sexo": "Otro",
+            "telefono": "155454515",
+            "nacionalidad": "Peruana"
+        },
+        {
+            "distrito": "adawd",
+            "fechaNacimiento": "14/05/2025",
+            "correo": "dawdaw",
+            "nombresApellidos": "empleado nose",
+            "direccion": "adawdaw",
+            "identificacion": "1231232",
+            "id": "009",
+            "sexo": "Mujer",
+            "telefono": "121312121",
+            "nacionalidad": "Extranjera"
+        },
+        {
+            "distrito": "adawwda",
+            "fechaNacimiento": "14/05/2025",
+            "correo": "adawdawdaw",
+            "nombresApellidos": "nose argentino",
+            "direccion": "awdawd",
+            "identificacion": "112312",
+            "id": "010",
+            "sexo": "Hombre",
+            "telefono": "54485",
+            "nacionalidad": "Peruana"
+        }
+    ],
+    "clientes": [
+        {
+            "distrito": "surco",
+            "correo": "cahuaya@hotmail.com",
+            "nombresApellidos": "leonardo cahuaya",
+            "direccion": "los angeles",
+            "identificacion": "141251451",
+            "id": "001",
+            "sexo": "Mujer",
+            "telefono": "981114546",
+            "numeroLicencia": "001",
+            "nacionalidad": "peru"
+        },
+        {
+            "distrito": "san isidro",
+            "correo": "hola@gmail.com",
+            "nombresApellidos": "nose que poner",
+            "direccion": "los alamos",
+            "identificacion": "142513621",
+            "id": "002",
+            "sexo": "Hombre",
+            "telefono": "231433245",
+            "numeroLicencia": "002",
+            "nacionalidad": "argentina"
+        },
+        {
+            "distrito": "san borja",
+            "correo": "nose@gmail.com",
+            "nombresApellidos": "hola mundo",
+            "direccion": "las serpientes",
+            "identificacion": "12415412",
+            "id": "003",
+            "sexo": "Hombre",
+            "telefono": "124524985",
+            "numeroLicencia": "003",
+            "nacionalidad": "colombia"
+        },
+        {
+            "distrito": "san borja",
+            "correo": "dadaw",
+            "nombresApellidos": "dawdawd awdawda",
+            "direccion": "dawdadawd",
+            "identificacion": "31232",
+            "id": "005",
+            "sexo": "Hombre",
+            "telefono": "455552",
+            "numeroLicencia": "005",
+            "nacionalidad": "Peruana"
+        },
+        {
+            "distrito": "los angeles",
+            "correo": "dadaw",
+            "nombresApellidos": "freddy delgado",
+            "direccion": "awdawd",
+            "identificacion": "1552555",
+            "id": "007",
+            "sexo": "Hombre",
+            "telefono": "1234512",
+            "numeroLicencia": "007",
+            "nacionalidad": "Extranjera"
+        }
+    ],
+    "vehiculos": [
+        {
+            "tipo": "camioneta",
+            "color": "Gris",
+            "lunasPolarizadas": "Si",
+            "marcaModelo": "ferrari",
+            "numeroPlaca": "ABC123"
+        },
+        {
+            "tipo": "convertible",
+            "color": "Celeste",
+            "lunasPolarizadas": "No",
+            "marcaModelo": "toyota",
+            "numeroPlaca": "ADD131"
+        },
+        {
+            "tipo": "camion",
+            "color": "Azul",
+            "lunasPolarizadas": "Si",
+            "marcaModelo": "lambo",
+            "numeroPlaca": "AAA111"
+        }
+    ]
+}
