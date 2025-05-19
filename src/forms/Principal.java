@@ -24,6 +24,9 @@ public class Principal extends javax.swing.JFrame {
         btnRegisCliente.setEnabled(false);
         btnRegisEmple.setEnabled(false);
         btnRegisVehiculo.setEnabled(false);
+        menuCliente.setEnabled(false);
+        menuEmpleado.setEnabled(false);
+        menuVehiculo.setEnabled(false);
         btnRegisEntrada.setEnabled(false);
         btnRegisSalida.setEnabled(false);
         btnListaRegistro.setEnabled(false);
@@ -52,6 +55,13 @@ public class Principal extends javax.swing.JFrame {
         btnSelecArchivo = new Diseño.Button();
         jLabel4 = new javax.swing.JLabel();
         btnListaRegistro = new Diseño.Button();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        menuCliente = new javax.swing.JMenuItem();
+        menuEmpleado = new javax.swing.JMenuItem();
+        menuVehiculo = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -225,6 +235,48 @@ public class Principal extends javax.swing.JFrame {
         background1.add(panelPrinc);
         panelPrinc.setBounds(60, 30, 820, 470);
 
+        jMenu1.setText("Archivo");
+
+        jMenuItem1.setText("SeleccionarArchivo");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Registrar Entidades");
+
+        menuCliente.setText("Registrar Cliente");
+        menuCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuClienteActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuCliente);
+
+        menuEmpleado.setText("Registrar Empleado");
+        menuEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuEmpleadoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuEmpleado);
+
+        menuVehiculo.setText("Registrar Vehículo");
+        menuVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuVehiculoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuVehiculo);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -235,7 +287,7 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background1, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
+            .addComponent(background1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 522, Short.MAX_VALUE)
         );
 
         pack();
@@ -291,6 +343,9 @@ public class Principal extends javax.swing.JFrame {
             btnRegisEntrada.setEnabled(true);
             btnRegisSalida.setEnabled(true);
             btnListaRegistro.setEnabled(true);
+            menuCliente.setEnabled(true);
+            menuEmpleado.setEnabled(true);
+            menuVehiculo.setEnabled(true);
         }
     }//GEN-LAST:event_btnSelecArchivoActionPerformed
 
@@ -311,6 +366,49 @@ public class Principal extends javax.swing.JFrame {
         listado.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnListaRegistroActionPerformed
+
+    private void menuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuClienteActionPerformed
+        Registros registro = new Registros();
+        registro.registroCliente(this);
+        if (registro.getCliente()==null) {
+            return;
+        }
+        TodoJson.agregarCliente(archivo, registro.getCliente());
+    }//GEN-LAST:event_menuClienteActionPerformed
+
+    private void menuVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVehiculoActionPerformed
+        Registros registro = new Registros();
+        registro.registroVehiculo(this);
+        if (registro.getVehiculo()==null) {
+            return;
+        }
+        TodoJson.agregarVehiculo(archivo, registro.getVehiculo());
+    }//GEN-LAST:event_menuVehiculoActionPerformed
+
+    private void menuEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEmpleadoActionPerformed
+        Registros registro = new Registros();
+        registro.registroEmpleado(this);
+        if (registro.getEmpleado()==null) {
+            return;
+        }
+        TodoJson.agregarEmpleado(archivo, registro.getEmpleado());
+    }//GEN-LAST:event_menuEmpleadoActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        archivo = TodoJson.selecArchivo();
+        if (!(archivo == null)) {
+            JOptionPane.showMessageDialog(this, "Archivo cargado correctamente");
+            btnRegisCliente.setEnabled(true);
+            btnRegisEmple.setEnabled(true);
+            btnRegisVehiculo.setEnabled(true);
+            btnRegisEntrada.setEnabled(true);
+            btnRegisSalida.setEnabled(true);
+            btnListaRegistro.setEnabled(true);
+            menuCliente.setEnabled(true);
+            menuEmpleado.setEnabled(true);
+            menuVehiculo.setEnabled(true);
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -361,6 +459,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem menuCliente;
+    private javax.swing.JMenuItem menuEmpleado;
+    private javax.swing.JMenuItem menuVehiculo;
     private javax.swing.JPanel panelPrinc;
     // End of variables declaration//GEN-END:variables
 }
