@@ -9,7 +9,8 @@ Este programa en java permite registrar clientes, empleados y vehículos además
 - [TimingFramework](https://github.com/akuhtz/timingframework)
 - [Common-image](https://mvnrepository.com/artifact/com.twelvemonkeys.common/common-image)
 - [Swing time picker](https://github.com/DJ-Raven/java-swing-timepicker)
-## Creditos
+
+- ## Creditos
 - La mayoría del increíble diseño java swing es de: [DJ-Raven](https://github.com/DJ-Raven)
 * https://www.youtube.com/c/HelloWorld-Raven
 * https://www.youtube.com/watch?v=RZK0RlBhPpQ
